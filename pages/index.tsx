@@ -7,9 +7,11 @@ import { COMPANIES, SITE_NAME } from '../strings';
 export default function Home() {
   return (
     <>
-      <a href="/">
-        <img src="/lg-financial-logo.png" alt={SITE_NAME} />
-      </a>
+      <Container noPadOnMobile>
+        <a href="/">
+          <img src="/lg-financial-logo.png" alt={SITE_NAME} />
+        </a>
+      </Container>
       <Container>
         <Section>
           <H1>{SITE_NAME}</H1>

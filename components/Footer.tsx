@@ -1,4 +1,5 @@
 import { SITE_NAME } from '../strings';
+import { Container } from './Container';
 import { Link } from './elements';
 
 function getCopyrightDate() {
@@ -12,13 +13,15 @@ function getCopyrightDate() {
 
 export function Footer() {
   return (
-    <footer className="bg-gold text-white font-serif p-sm md:px-md lg:px-lg xl:px-xl ">
-      <small>
-        {SITE_NAME} - {getCopyrightDate()} All rights reserved. Website by {/* @ts-ignore */}
-        <Link className="font-bold" href="https://colbygarland.ca" target="_blank">
-          Colby Garland
-        </Link>
-      </small>
+    <footer className="bg-gold text-white font-serif py-sm">
+      <Container>
+        <small>
+          {SITE_NAME} - {getCopyrightDate()} All rights reserved. Website by {/* @ts-ignore */}
+          <Link className="font-bold" href="https://colbygarland.ca" target="_blank">
+            Colby Garland
+          </Link>
+        </small>
+      </Container>
     </footer>
   );
 }
